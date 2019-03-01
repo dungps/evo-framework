@@ -1,0 +1,47 @@
+{
+  "name": "evoframework",
+  "version": "0.0.1",
+  "description": "MVC framework for Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kevin <kevin@techevo.vn>",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.6.2",
+    "bcrypt": "^3.0.4",
+    "bluebird": "^3.5.3",
+    "body-parser": "^1.18.3",
+    "bookshelf": "^0.14.2",
+    "commander": "^2.19.0",
+    "compression": "^1.7.3",
+    "dotenv": "^6.2.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "jsonpath": "^1.0.1",
+    "knex": "^0.16.3",
+    "lodash": "^4.17.11",
+    "moment": "^2.24.0",
+    "morgan": "^1.9.1",
+    "nodemailer": "^5.1.1",
+    "nodemon": "^1.18.10",
+    "skipper": "^0.8.7",
+    "util": "^0.11.1",
+    "uuid": "^3.3.2",
+    "validator": "^10.11.0",
+    "winston": "^3.2.1"
+  },
+  "bin": {
+    "evo": "./bin/evo.js"
+  },
+  "engines": {
+    "node": ">= 8.0.0",
+    "npm": ">= 1.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.14.1",
+    "eslint-plugin-node": "^8.0.1",
+    "prettier": "^1.16.4"
+  }
+}

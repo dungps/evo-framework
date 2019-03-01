@@ -1,0 +1,13 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true
+  },
+  "extends": ["eslint:recommended", "plugin:node/recommended"],
+  "globals": {
+    "evo": "readonly",
+    "validator": "readonly",
+    "util": "readonly",
+    "moment": "readonly"
+  }
+}
