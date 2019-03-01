@@ -1,5 +1,5 @@
 {
-  "name": "evoframework",
+  "name": "evo-framework",
   "version": "0.0.1",
   "description": "MVC framework for Node.js",
   "main": "./core/index.js",
