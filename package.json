@@ -2,11 +2,11 @@
   "name": "evoframework",
   "version": "0.0.1",
   "description": "MVC framework for Node.js",
-  "main": "index.js",
+  "main": "./core/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Kevin <kevin@techevo.vn>",
+  "author": "Oryc9x <oryc9x@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "async": "^2.6.2",
@@ -43,5 +43,20 @@
     "eslint": "^5.14.1",
     "eslint-plugin-node": "^8.0.1",
     "prettier": "^1.16.4"
+  },
+  "keywords": [
+    "mvc",
+    "web-framework",
+    "express",
+    "REST",
+    "API",
+    "orm"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dungps/evo-framework.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dungps/evo-framework/issues"
   }
 }
