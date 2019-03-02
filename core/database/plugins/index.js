@@ -1,3 +1,4 @@
 module.exports = {
-  pagination: require("./pagination")
+  pagination: require("./pagination"),
+  cache: require("./cache")
 };
