@@ -1,6 +1,6 @@
 const knex = require("../core/database");
 
-module.exports = function(name, cmd) {
+module.exports = function() {
   knex.migrate
     .latest()
     .then(log => {

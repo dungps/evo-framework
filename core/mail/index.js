@@ -49,7 +49,7 @@ Mailer.prototype.setSubject = function(subject) {
 };
 
 Mailer.prototype.setAttachments = function(attachments = []) {
-  this.attachments = [];
+  this.attachments = attachments;
 };
 
 Mailer.prototype.isHTML = function() {

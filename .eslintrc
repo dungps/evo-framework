@@ -9,5 +9,8 @@
     "validator": "readonly",
     "util": "readonly",
     "moment": "readonly"
+  },
+  "rules": {
+    "no-console": 0
   }
 }

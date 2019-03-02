@@ -24,7 +24,7 @@ module.exports = async () => {
     next(err);
   });
 
-  app.use((err, req, res, next) => {
+  app.use((err, req, res) => {
     const statusCode = err.errCode || 500;
 
     res.status(statusCode);

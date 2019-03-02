@@ -29,6 +29,31 @@ const addLimitAndOffset = function(model, options) {
   }
 };
 
+const formatResponse = function(totalItems, options) {
+  var calcPages = Math.ceil(totalItems / options.limit) || 0,
+    pagination = {
+      page: options.page || defaults.page,
+      limit: options.limit,
+      pages: calcPages === 0 ? 1 : calcPages,
+      total: totalItems,
+      next: null,
+      prev: null
+    };
+
+  if (pagination.pages > 1) {
+    if (pagination.page === 1) {
+      pagination.next = pagination.page + 1;
+    } else if (pagination.page === pagination.pages) {
+      pagination.prev = pagination.page - 1;
+    } else {
+      pagination.next = pagination.page + 1;
+      pagination.prev = pagination.page - 1;
+    }
+  }
+
+  return pagination;
+};
+
 /**
  * ### Pagination Object
  * @typedef {Object} pagination

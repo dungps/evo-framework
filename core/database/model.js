@@ -1,8 +1,6 @@
 const _ = require("lodash");
 const bookshelf = require("bookshelf");
-const Promise = require("bluebird");
 const uuid = require("uuid/v1");
-const configs = require("../configs");
 const events = require("../events");
 const knex = require("./knex");
 const plugins = require("./plugins");
@@ -66,7 +64,7 @@ appBookshelf.Model = appBookshelf.Model.extend({
     const self = this;
 
     this.on("saving", function(newObj, attrs, options) {
-      if ((options.method = "insert")) {
+      if (options.method == "insert") {
         if (_.isUndefined(newObj.id) || _.isNull(newObj.id)) {
           newObj.setId();
         }
@@ -108,7 +106,7 @@ appBookshelf.Model = appBookshelf.Model.extend({
     proto.initialize.call(this);
   },
 
-  onCreating: function(model, attr, options) {
+  onCreating: function(model) {
     if (!model.get("created_at")) {
       model.set("created_at", new Date());
     }
@@ -118,7 +116,7 @@ appBookshelf.Model = appBookshelf.Model.extend({
     }
   },
 
-  onUpdating: function(model, attr, options) {
+  onUpdating: function(model) {
     model.set("updated_at", new Date());
   },
 

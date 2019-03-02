@@ -1,5 +1,5 @@
 {
-  "name": "evo-framework",
+  "name": "@workevo/framework",
   "version": "0.0.1",
   "description": "MVC framework for Node.js",
   "main": "./core/index.js",
@@ -25,7 +25,6 @@
     "moment": "^2.24.0",
     "morgan": "^1.9.1",
     "nodemailer": "^5.1.1",
-    "nodemon": "^1.18.10",
     "skipper": "^0.8.7",
     "util": "^0.11.1",
     "uuid": "^3.3.2",
@@ -42,6 +41,7 @@
   "devDependencies": {
     "eslint": "^5.14.1",
     "eslint-plugin-node": "^8.0.1",
+    "mocha": "^6.0.2",
     "prettier": "^1.16.4"
   },
   "keywords": [
@@ -58,5 +58,6 @@
   },
   "bugs": {
     "url": "https://github.com/dungps/evo-framework/issues"
-  }
+  },
+  "homepage": "https://github.com/dungps/evo-framework#readme"
 }

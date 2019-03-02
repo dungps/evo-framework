@@ -1,8 +1,7 @@
-module.exports = function(cmd) {
+module.exports = function() {
   try {
     require("../core")();
   } catch (e) {
     console.log(e);
-    process.exit(1);
   }
 };

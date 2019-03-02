@@ -11,7 +11,7 @@ const configs = require("./configs");
 const log = require("./logs");
 
 module.exports = () => {
-  return new Promise((resolve, reject) => {
+  return new Promise(resolve => {
     const evo = {};
 
     evo.configs = configs;

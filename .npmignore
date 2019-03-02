@@ -21,6 +21,7 @@ npm-debug.log
 *.log
 *.out
 *.pid
+*.lock
 lib-cov
 .DS_STORE
 *#
