@@ -19,8 +19,8 @@ appBookshelf.plugin("registry");
 // Thêm plugin pagination cho Bookshelf, nó sẽ cung cấp thêm method `fetchPage` cho Models
 appBookshelf.plugin(plugins.pagination);
 
-// Caching
-appBookshelf.plugin(plugins.cache);
+// TODO: Caching
+// appBookshelf.plugin(plugins.cache);
 
 // Cache lại instance của Model prototype
 proto = appBookshelf.Model.prototype;

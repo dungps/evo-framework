@@ -44,11 +44,6 @@ program.command("migrate:make [name]").action(require("./evo-migrate-make"));
 program.command("migrate:latest").action(require("./evo-migrate-latest"));
 program.command("migrate:rollback").action(require("./evo-migrate-rollback"));
 
-program
-  .command("start")
-  .option("--prod", "Start in production")
-  .action(require("./evo-start"));
-
 program.parse(process.argv);
 const NO_COMMAND_SPECIFIED = program.args.length === 0;
 
