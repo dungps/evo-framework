@@ -1,6 +1,6 @@
 {
   "name": "@workevo/framework",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "MVC framework for Node.js",
   "main": "./core/index.js",
   "scripts": {

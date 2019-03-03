@@ -1,26 +1,17 @@
-const _ = require("lodash");
-const util = require("util");
-const moment = require("moment");
-const validator = require("validator");
-const database = require("./database");
-const i18n = require("./i18n");
-const model = require("./database/model");
-const mail = require("./mail");
-const tpls = require("./views");
-const configs = require("./configs");
-const log = require("./logs");
-
 module.exports = () => {
   return new Promise(resolve => {
     const evo = {};
 
+    const configs = require("./configs");
+    const i18n = require("./i18n");
+
     evo.configs = configs;
-    evo.database = database;
+    evo.database = require("./database");
     evo.i18n = i18n;
-    evo.bookshelf = model;
-    evo.mail = mail;
-    evo.tpls = tpls;
-    evo.log = log;
+    evo.bookshelf = require("./database/model");
+    evo.mail = require("./mail");
+    evo.tpls = require("./views");
+    evo.log = require("./logs");
 
     /**
      *
@@ -43,10 +34,10 @@ module.exports = () => {
     }
 
     global["evo"] = evo;
-    global["_"] = _;
-    global["util"] = util;
-    global["moment"] = moment;
-    global["validator"] = validator;
+    global["_"] = require("lodash");
+    global["util"] = require("util");
+    global["moment"] = require("moment");
+    global["validator"] = require("validator");
 
     resolve();
   });
