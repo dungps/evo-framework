@@ -59,6 +59,7 @@ Middleware.prototype.load = function(app) {
 Middleware.prototype.loadCoreMiddeware = function(app) {
   app.use(base.headers);
   app.use(base.languages);
+  app.use(base.redis);
 };
 
 module.exports = new Middleware();
