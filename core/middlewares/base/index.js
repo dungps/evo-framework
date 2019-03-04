@@ -1,4 +1,5 @@
 module.exports = {
   headers: require("./headers"),
-  languages: require("./languages")
+  languages: require("./languages"),
+  redis: require("./redis")
 };

@@ -36,13 +36,15 @@ Middleware.prototype.load = function(app) {
 
   app.use(skipper());
 
-  // if (process.env.NODE_ENV === "development") {
-  app.use(
-    require("morgan")("combined", {
-      stream: logger
-    })
-  );
-  // }
+  if (process.env.NODE_ENV === "development") {
+    app.use(
+      require("morgan")("combined", {
+        stream: logger
+      })
+    );
+  } else {
+    app.use(require("morgan")("tiny"));
+  }
 
   if (process.env.NODE_ENV === "production") {
     app.use(compression());
