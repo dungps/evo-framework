@@ -4,6 +4,7 @@ module.exports = () => {
 
     const configs = require("./configs");
     const i18n = require("./i18n");
+    const _ = require("lodash");
 
     evo.configs = configs;
     evo.database = require("./database");
@@ -34,7 +35,7 @@ module.exports = () => {
     }
 
     global["evo"] = evo;
-    global["_"] = require("lodash");
+    global["_"] = _;
     global["util"] = require("util");
     global["moment"] = require("moment");
     global["validator"] = require("validator");
